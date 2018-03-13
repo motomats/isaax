@@ -5,6 +5,6 @@ sense.set_rotation(180)
 
 while True:
     temp = sense.get_temperature()
-    print("Temperature: %s C" % temp)
-    sense.show_message("Temp: %s C" % temp)
+    print("Temperature: %s C" % round(temp,2))
+    sense.show_message("Temp: %s C" % round(temp,2))
     time.sleep(60)
