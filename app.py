@@ -3,9 +3,9 @@ from sense_hat import SenseHat
 sense = SenseHat()
 sense.set_rotation(180)
 
-while True:
-    print("Hello IoT from Isaax")
+for i in range(5):
+    print("Hello IoT from Isaax" + str(i) )
     sense.show_message("Hello IoT from Isaax")
     temp = sense.get_temperature()
     print("Temperature: %s C" % temp)
-    time.sleep(60)
+    time.sleep(10)
