@@ -1,10 +1,6 @@
 import time
-from sense_hat import SenseHat
-sense = SenseHat()
-sense.set_rotation(180)
 
 while True:
-    temp = sense.get_temperature()
+    temp=float(open('/sys/class/thermal/thermal_zone0/temp').read().strip())/1000
     print("Temperature: %s C" % round(temp,2))
-    sense.show_message("Temp: %s C" % round(temp,2))
     time.sleep(60)
